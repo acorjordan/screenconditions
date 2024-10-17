@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+	Axiell Web API sample configuration
+        Documentation URL: http://webapi.axiell.com/documentation/the-adlibweb-xml-file
+-->
+<webConfiguration>
+  <!-- Global settings -->
+  <globalConfiguration>
+    <databasePath>C:\Adlib\Application\data</databasePath>
+    <xmlType>grouped</xmlType>
+    <jsonFormat>standard</jsonFormat>
+    <output>json</output>
+    <span>false</span>
+    <facetlimit>100</facetlimit>
+  </globalConfiguration>
+
+  <!-- Image server settings -->
+  <imageServerConfiguration name="imageServerId">
+    <servertype>FileSystem</servertype>
+    <path>C:\Adlib\Application\media</path>
+  </imageServerConfiguration>
+
+  <!-- Group settings -->
+  <groupConfiguration group="defaultcollect">
+    <briefFields>
+      <field>object_number</field>
+      <field>title</field>
+      <field>description</field>
+    </briefFields>
+
+    <detailFields>
+      <field>*</field>
+    </detailFields>
+
+    <searchFields>
+      <field>*</field>
+    </searchFields>
+  </groupConfiguration>
+
+  <!-- Database settings -->
+
+<!-- Database collect -->
+  <databaseConfiguration database="Total collect" groups="defaultcollect">
+    <database>collect</database>
+  </databaseConfiguration>
+<% @collections.each do |collection| %>
+<!-- Database <%= collection["datasource"] %> -->
+  <databaseConfiguration database="<%= collection["isTransfer"]? "Transfer" : "New" %> <%= collection["datasource"] %>" groups="defaultcollect">
+    <database>collect&gt;<%= collection["ZY"] %></database>
+  </databaseConfiguration>
+<% end %>
+
+</webConfiguration>

@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+pre, code {
+  background-color: #f8f8f8;
+  padding: 10px;
+  border: 1px solid #ddd;
+  white-space: normal;        /* Allow the text to wrap normally */
+  word-wrap: break-word;      /* Break long words inside the element */
+  overflow-wrap: anywhere;    /* Break at any point if necessary */
+}
+
+pre {
+  max-width: 100%;            /* Ensure the <pre> block fits within the container */
+  display: block;             /* Ensure pre behaves as a block element */
+}
+
+code {
+  display: block;             /* Ensure code behaves like a block element */
+  max-width: 100%;            /* Ensure the <code> block fits within the container */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button.remove-row {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button.remove-row:hover {
+  background-color: #c0392b;
+}

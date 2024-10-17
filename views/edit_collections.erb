@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Collections</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Edit Collections</h1>
+  <form id="collections-form" action="/update_collections" method="POST">
+    <table id="collections-table">
+      <tr>
+        <th>ZY</th>
+        <th>Datasource</th>
+        <th>In Transfer</th>
+        <th>Action</th>
+      </tr>
+      <% @collections.each do |collection| %>
+        <tr>
+          <td><input type="text" name="collections[][ZY]" value="<%= collection['ZY'] %>"></td>
+          <td><input type="text" name="collections[][datasource]" value="<%= collection['datasource'] %>"></td>
+          <td>
+            <input type="checkbox" name="collections[][isTransfer]" value="True" <%= 'checked' if collection['isTransfer'] %>>
+          </td>
+          <td><button type="button" class="remove-row">Remove</button></td>
+        </tr>
+      <% end %>
+    </table>
+    <button type="button" id="add-row">Add Collection</button>
+    <button type="submit">Save Changes</button>
+  </form>
+
+  <p><a href="/">Back to Screen Conditions</a></p>
+
+  <script>
+    // Add new row
+    $('#add-row').on('click', function() {
+      $('#collections-table').append(`
+        <tr>
+          <td><input type="text" name="collections[][ZY]" value=""></td>
+          <td><input type="text" name="collections[][datasource]" value=""></td>
+          <td><input type="checkbox" name="collections[][isTransfer]" value="True"></td>
+          <td><button type="button" class="remove-row">Remove</button></td>
+        </tr>
+      `);
+    });
+
+    // Remove row
+    $(document).on('click', '.remove-row', function() {
+      $(this).closest('tr').remove();
+    });
+  </script>
+</body>
+</html>

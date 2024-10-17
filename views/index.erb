@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Screen Conditions</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Screen Conditions</h1>
+  <div>
+    <% @screens.each do |screen| %>
+      <h2><%= screen[:name] %></h2>
+      <pre><code><%= erb screen[:content] %></code></pre>
+    <% end %>
+  </div>
+  <p><a href="/edit_collections">Edit Collections</a></p>
+  <p><a href="/api">View API XML Configuration</a></p>
+</body>
+</html>
