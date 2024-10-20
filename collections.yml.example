@@ -1,0 +1,91 @@
+---
+- ZY: acor
+  datasource: ACOR
+  isTransfer: false
+- ZY: ajloun
+  datasource: Ajloun
+  isTransfer: true
+- ZY: ajlounstorehouse
+  datasource: Ajloun Storehouse
+  isTransfer: true
+- ZY: baptismsitemuseum
+  datasource: Baptism Site Museum
+  isTransfer: true
+- ZY: baptismsitestorehouse
+  datasource: Baptism Site Storehouse
+  isTransfer: true
+- ZY: deirallahstorehouse
+  datasource: Deir Alla Storehouse
+  isTransfer: true
+- ZY: faynanmuseum
+  datasource: Faynan Museum
+  isTransfer: true
+- ZY: ghorassafimuseum
+  datasource: Ghor as-Safi Museum
+  isTransfer: true
+- ZY: ghorassafistorehouse
+  datasource: Ghor as-Safi Storehouse
+  isTransfer: true
+- ZY: irbidmuseum
+  datasource: Irbid Museum
+  isTransfer: true
+- ZY: irbidstorehouse
+  datasource: DOJAM Irbid Storehouse
+  isTransfer: true
+- ZY: jam
+  datasource: DOJAM Jordan Archaeology Museum
+  isTransfer: true
+- ZY: jerashmuseum
+  datasource: Jerash Museum
+  isTransfer: true
+- ZY: jerashstorehouse
+  datasource: Jerash Storehouse
+  isTransfer: true
+- ZY: lowestmuseum
+  datasource: Museum at the Lowest Place on Earth
+  isTransfer: true
+- ZY: madabamuseum
+  datasource: Madaba Museum
+  isTransfer: true
+- ZY: mafraq
+  datasource: Mafraq
+  isTransfer: true
+- ZY: museum
+  datasource: Object catalogue
+  isTransfer: true
+- ZY: pelladighouse
+  datasource: Pella Dig House
+  isTransfer: true
+- ZY: pellastorehouse
+  datasource: Pella Store House
+  isTransfer: true
+- ZY: petramuseum
+  datasource: Petra Museum
+  isTransfer: true
+- ZY: ramthastorehouse
+  datasource: Ramtha Storehouse
+  isTransfer: true
+- ZY: saltmuseum
+  datasource: Salt Museum
+  isTransfer: true
+- ZY: saltwarehouse
+  datasource: Salt Warehouse
+  isTransfer: true
+- ZY: tafilahstorehouse
+  datasource: Tafilah Storehouse
+  isTransfer: true
+- ZY: training
+  datasource: Training
+  isTransfer: true
+- ZY: treasurytombsexcavation
+  datasource: TTE
+  isTransfer: false
+- ZY: twl
+  datasource: TWL
+  isTransfer: false
+- ZY: ummqais
+  datasource: Umm Qais
+  isTransfer: true
+- ZY: zarqastorehouse
+  datasource: Zarqa Storehouse
+  isTransfer: true

@@ -5,10 +5,12 @@ require 'rack/utils'
 
 # Load all collections from the YAML file
 def load_collections
+  unless File.exist?('collections.yml')
+    FileUtils.cp('collections.yml.example', 'collections.yml')
+  end
   YAML.load_file('collections.yml').sort_by{|collection| collection['ZY'] }
 end
 
-# Save collections to the YAML file
 def save_collections(collections)
   File.open('collections.yml', 'w') { |f| f.write(collections.to_yaml(line_width: -1)) }
 end
